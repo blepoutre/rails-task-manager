@@ -1,0 +1,9 @@
+<%= form_with model: @task do |f| %>
+  <div class="input-group mb-3">
+  <div class="input-group-text">
+    <%= f.check_box :completed, class: "form-check-input mt-0", aria: { label: "Checkbox for following text input" } %>
+  </div>
+  <%= f.text_field :title, class: "form-control", aria: { label: "Text input with checkbox" }, placeholder: "Title of the task" %>
+  <%= f.submit class: "btn btn-primary" %>
+</div>
+<% end %>

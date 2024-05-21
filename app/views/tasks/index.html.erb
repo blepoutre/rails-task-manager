@@ -1,0 +1,9 @@
+<div class="container d-flex justify-content-center align-items-center flex-column">
+  <h1>My tasks' list :</h1>
+  <ul>
+  <% @tasks.each do |task| %>
+    <li class="list-unstyled"><%= link_to task.title, task_path(task) %></li>
+  <% end %>
+   </ul>
+<%=  link_to "create task", new_task_path %>
+</div>
